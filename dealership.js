@@ -44,7 +44,6 @@ Dealership.prototype.getAllCarManufacturers = function(){
 Dealership.prototype.findAllCarsFromManufacturer = function(manufacturerName){
     const carsByManufacturerName = this.stock.filter(car => car.manufacturer === manufacturerName);
     return carsByManufacturerName;
-
 }
 
 
