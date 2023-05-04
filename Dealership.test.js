@@ -65,7 +65,7 @@ describe('Check dealership functionalities', () => {
 
     const dealership2 = new Dealership("Stella's", 4)
 
-    test('can add 4 cars to dealiership 2',() => { 
+    test('can add 4 (maximum) cars to dealiership 2',() => { 
         dealership2.addCarToStock(audi);
         dealership2.addCarToStock(bmw);
         dealership2.addCarToStock(mercedes);
@@ -75,5 +75,15 @@ describe('Check dealership functionalities', () => {
         expect(actual).toBe(expected);
         expect(actual).toEqual(expected);
 })
+
+test('can add new cars when max is set to 4', () => {
+    const tesla = new Car("Tesla", 100_000, "electric");
+    dealership2.addCarToStockwithMaxLimit(tesla);
+    expected = [audi, bmw, mercedes, mercedes2];
+    actual = dealership2.stock;
+    expect(actual).toEqual(expected);
+  });
+
+
 
 })

@@ -26,10 +26,10 @@ Dealership.prototype.addCarToStock = function(newCar){
 // extension 1 : adding car to stock with max limit
 
 Dealership.prototype.addCarToStockwithMaxLimit = function(newCar){
-    if (this.stock !== this.maxNoOfCars){
+    if (this.stock < this.maxNoOfCars){
         this.stock.push(newCar);
-
-}}
+    }
+}
 
 
 // find car manufacturer 
