@@ -1,14 +1,18 @@
 const Customer = function(name, wallet){
     this.name = name;
     this.wallet = wallet;
-    this.car = null;
+    this.car = [];
 
 }
 
-Customer.prototype.buyCar = function(car){
-    const customerNewCar = dealership.stock.find(car => car.price <= this.wallet);
+
+// extension task 2: add a customer class 
+Customer.prototype.buyCar = function(){
+    const customerNewCar = dealership.stock.find((car) => car.price <= this.wallet);
     this.car.push(customerNewCar);
 }
+
+
 
 
 

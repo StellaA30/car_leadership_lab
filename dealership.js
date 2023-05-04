@@ -56,5 +56,16 @@ Dealership.prototype.calculateStockValue = function(){
 }
 
 
+// extension 3:Write a `sellCar` method to `Dealership` which removes a car from the `stock`. This method will also call `buyCar()` from `customer`. 
+
+Dealership.prototype.sellCar = function(customer, car){
+    if (customer.canBuy){
+        delete this.stock.customer.car;
+
+    }
+}
+
+
+
 
 module.exports = Dealership;
